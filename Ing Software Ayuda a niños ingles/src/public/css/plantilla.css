@@ -1,0 +1,359 @@
+body{
+    margin-left: 25%;   
+    /* overflow: hidden; */
+}
+#side-menu{
+    background-color: rgb(99, 136, 235);
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.menu-collapsed{
+    display: block;
+    width: 18%;
+    height: 100vh;
+    padding: 0.4;
+    text-align: center;
+    -webkit-box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+    box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+}
+.menu div{
+    margin-top: 0.1rem;
+}
+.menu-expanded div{
+    margin-top: 0.4rem;
+}
+.hamburguesa svg,
+.menu-collapsed .usuario-nav{
+    display: none;
+}
+.logo-nav{
+    max-width: 80%;
+}
+.menu-expanded .logo{
+    max-width: 10%;
+}
+.avatar-nav{
+    margin: 0;
+}
+.avatar-nav img,
+.menu-collapsed .enlace-menu-nav svg{
+    max-width: 80%;
+}
+.menu-collapsed .enlace-menu-nav svg{
+    display: flex;
+    margin-top: 0.4rem;
+    padding: 0;
+    margin: 0 auto;
+}
+.menu-collapsed .enlace-menu-nav p{
+    display: none;
+}
+.main-container{
+    display: flex;
+    /* overflow: auto; */
+    flex-direction: column;
+    color: rgb(27, 26, 26);
+    width: 90%;
+    height: 100vh;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    background-color: antiquewhite;    
+    -webkit-box-shadow: 6px 7px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 7px 17px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 7px 17px 0px rgba(0,0,0,0.75);
+}
+
+@media (min-width: 550px){
+    body{
+        margin-left: 13%;
+        overflow: auto;
+    }
+    .body-expanded{
+        margin-left: 30%;
+    }
+    .menu-collapsed{
+        display: block;
+        width: 6.4rem;
+        height: 100vh;
+        text-align: center;
+        -webkit-box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+        box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+        cursor: pointer;    
+        transition: all 0.2s ease-in-out;
+    }    
+    .menu-collapsed .logo-nav,
+    .menu-collapsed .usuario-nav{
+        display: none;
+    }
+    .menu-collapsed .avatar-nav img{
+        display: flex;
+        max-width: 100%;
+        margin: 0.5rem 1.5rem;
+    }    
+    .menu-collapsed .enlace-menu-nav{
+        display: flex;
+        max-width: 4rem;        
+        padding: 0;
+        margin: 0 auto;
+    }
+    .menu-collapsed .enlace-menu-nav p{
+        display: none;
+    }
+    .menu-collapsed .enlace-menu-nav:hover{
+        border-radius: 3rem;
+        transition: 0.5s ease-in-out;
+        background-color: rgb(212, 208, 153);
+        transform: scale(102%);        
+        filter: invert(100%);
+    }
+
+    .hamburguesa{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.5rem;
+        border-bottom: 1px solid #000;
+    }
+    .hamburguesa svg{
+        display: block;
+        width: 3.5rem;
+    }
+    .hamburguesa svg:hover{
+        cursor: pointer;
+        filter: invert(100%);
+        transition: 0.4s ease-out;
+    }
+    .enlace-menu-nav:hover{
+        background-color: rgb(212, 208, 153);
+        border-radius: 2rem;
+        transition: 0.2s ease-in-out;
+        transform: scale(102%);        
+        filter: invert(100%);
+    }
+    .enlace-menu-nav{
+        width: 100%;
+        margin: 0;        
+    }
+    .enlace-menu-nav:last-of-type{
+        margin-top: 2rem;
+    }
+    .enlace-menu-nav .opcion-nav{
+        color: black;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+    /* .main-container{
+        margin: 2rem;    
+        width: 85%;
+    } */
+
+    /* Expandido */
+    .menu-expanded{
+        display: block;
+        width: 30%; 
+        height: 100vh;
+        text-align: center;
+        background-color: rgb(99, 136, 235);
+        -webkit-box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+        box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu-expanded .logo-nav{
+        max-width: 23%;
+    }
+    .avatar-y-usuario-nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        align-items: center;
+        line-height: 1;    
+    }
+    .menu-expanded .avatar-nav img{
+        max-width: 50%;
+    }
+    .menu-expanded .usuario-nav{
+        font-size: 0.7rem;
+        inline-size: 4rem;
+        overflow-wrap: break-word;        
+        font-weight: bold;
+    }
+    .menu-expanded .usuario-nav span{
+        font-size: 0.6rem;
+        font-weight: normal;
+        font-style: italic;
+    }
+    .menu-expanded .enlace-menu-nav{
+        display: flex;
+        text-decoration: none;
+        justify-content: flex-start;
+        align-items: center;
+        width: 80%;
+        padding: 0 0.5rem; 
+        margin: 0 1.5rem ;
+    }
+
+    .menu-expanded .enlace-menu-nav svg{
+        width: 25%;
+        margin: 0;
+    }        
+    .menu-expanded .enlace-menu-nav:last-of-type{
+        margin-top: 2rem;
+    }
+    .version-nav{
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }    
+  
+}
+@media (min-width: 700px){
+    body{
+        margin-left: 10%;    
+    }
+    .main-container{
+        margin-left: 3rem;
+        width: 90%;
+        overflow: auto;
+    }
+    .body-expanded{
+        margin-left: 28%;
+    }
+    .enlace-menu-nav .opcion-nav{
+        font-size: 1.2rem;
+    }
+    .menu-expanded .usuario-nav{
+        font-size: 1rem;
+        inline-size: 7rem;
+        overflow-wrap: break-word;        
+        font-weight: bold;
+    }
+}
+@media(min-width: 900px){
+    body{
+        margin-left: 6%;    
+
+    }
+    .body-expanded{
+        margin-left: 18%;
+    }
+    .main-container{
+        /* display: block; */
+        margin: 4rem;
+        width: 92%;
+        height: 90%;
+    }
+    .menu-expanded{
+        display: block;
+        width: 18%; 
+        height: 100vh;
+        text-align: center;
+        background-color: rgb(99, 136, 235);
+        -webkit-box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+        box-shadow: 4px 6px 13px 0px rgba(0,0,0,0.75);
+    }
+}
+
+.opcion-selected{
+    background-color: rgb(20, 224, 204);
+    border-radius: 1.5rem;
+    filter: invert(100%);
+}
+.opcion-selected:hover{
+    background-color: rgb(187, 19, 202);
+    filter: invert(100%);
+    transform: scale(110%);
+}
+.opcion-selected-perfil{
+    background-color: rgb(227, 50, 15);
+    /* padding: 0.2rem; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS para lo Principal */
+.title-container{
+    text-transform: uppercase;
+    text-align: center;
+}
+.title-section{
+    background: #4e54c8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 3rem;
+    color: antiquewhites;
+    font-size: 1rem;
+    display: block;
+    padding: 1rem;    
+}
+.section-container{
+    /* border: 1px solid #000; */
+    margin: 1rem;
+    display: block;
+}
+
+@media (min-width: 550px){
+    .title-container{
+        margin: 1rem;
+    }
+    .title-section{
+        font-size: 2rem;
+    }
+}
+@media (min-width: 800px){
+    .title-section{
+        font-size: 2rem;
+    }    
+    .section-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+
+.btn-regresar-container{
+    margin: 2rem;
+}
+
+.btn-regresar{    
+    border-radius: 1rem;
+    display: inline-block;
+    background-color: rgb(255, 197, 6);
+}
+.btn-regresar:hover{    
+    background-color: rgb(87, 233, 238);
+    filter: invert(100%);
+    transition: 0.4s ease-in-out;
+}
+
+footer{
+    text-align: center;
+    padding: 1rem;
+    background-color: #000;
+    color: #FFF;
+}
+footer .text-footer{
+    font-size: 1.2rem;
+}
+

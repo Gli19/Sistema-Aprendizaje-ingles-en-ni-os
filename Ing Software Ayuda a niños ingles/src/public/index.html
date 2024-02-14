@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" href="./img/logo/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@200;300&family=Yeon+Sung&display=swap" rel="stylesheet">
+    <title>English Now</title>
+</head>
+<body>
+    <!-- MESSAGES -->
+    <!-- <% if (message) {%>
+      <input type="hidden" id="flash-msg" value="<%=message%>">
+    <%}%> -->
+
+    <main>
+      <section class="seccion-bienvenida text-center">
+        <div class="bienvenida">
+          <h2 class="titulo-bienvenida fw-bold mt-3 align-middle">Bienvenido a <span> English Now</span></h2>
+          <img class="img-login" src="img/login/logo2.png" alt="">
+        </div>
+      </section> 
+
+      <div class="contenedor__todo">
+        <div class="caja__trasera">
+          <div class="caja__trasera-login">
+            <h3>¿Ya tienes cuenta?</h3>
+            <p>Inicia Sesión para logearte</p>
+            <button id="btn__iniciar-sesion">Iniciar Sesión</button>            
+          </div>
+          <div class="caja__trasera-register">
+            <h3>¿Aun no tienes cuenta?</h3>
+            <p>Registrate para iniciar sesión</p>
+            <button id="btn__registrarse">Registrate</button>            
+          </div>
+        </div>
+        <div class="contenedor__login-register">
+
+          <!-- Formulario de Inicio Sesión -->
+          <form action="/signin" class="formulario__login" method="POST">
+            <h2>Iniciar Sesión</h2>
+            <div class="row">
+              <label for="login-email">Correo Electr&oacute;nico</label>
+              <input type="email" placeholder="Correo" id="login-email" name="login_email" required>
+
+            </div>
+            <div class="row">
+              <label for="login-password">Contrase&ntilde;a</label>
+              <input type="password" id="login-password" name="login_password" placeholder="Contraseña" required>
+            </div>
+            <button type="submit">Entrar</button>
+          </form>
+
+          <!-- Formulario de Registro -->
+          <form action="/signup" class="formulario__register"  method="POST">
+            <h2>Registrate</h2>
+            <div class="registro">
+              <div class="">
+                <h4>Datos del Alumno</h4>
+                <div class="row">
+                  <label for="signup-name" class="etiqueta">Nombre Completo</label>
+                  <input type="text" name="signup_name" id="signup-name" placeholder="Nombre" required>
+                </div>
+                <div class="row">
+                  <label for="signup-email" class="etiqueta">Correo Electrónico</label>
+                  <input type="email" id="signup-email" name="signup-email" placeholder="Correo" required>
+                </div>
+                <div class="row">
+                  <label for="signup-user-name" class="etiqueta">Crea un Nombre de Usuario</label>
+                  <input type="text" id="signup-user-name" name="signup_user-name" placeholder="Usuario" required>
+                </div>
+                <div class="row">
+                  <label for="signup-password" class="etiqueta">Crea una contraseña</label>
+                  <input type="password" id="signup-password" name="signup_password" placeholder="Contraseña" required>
+                </div>
+                <div class="row">
+                  <label for="signup_pais" class="etiqueta">País de Origen</label>
+                  <select name="signup_pais" id="signup_pais" required>
+                    <option value="" selected disabled>--Selecciona--</option>
+                    <option value="">Alemania</option>
+                    <option value="">Argentina</option>
+                    <option value="">Australia</option>
+                    <option value="">Brasil</option>                
+                    <option value="">Canadá</option>                
+                    <option value="">Chile</option>
+                    <option value="">China</option>
+                    <option value="">Colombia</option>
+                    <option value="">Corea del Sur</option>
+                    <option value="">Costa Rica</option>
+                    <option value="">El Salvador</option>
+                    <option value="">España</option>
+                    <option value="">Francia</option>
+                    <option value="">Guatemala</option>
+                    <option value="">Inglaterra</option>
+                    <option value="">Japón</option>
+                    <option value="">México</option>
+                    <option value="">Nueva Zelanda</option>
+                    <option value="">Países Bajos</option>
+                    <option value="">Suecia</option>
+                    <option value="">USA</option>
+                    <option value="">Suiza</option>
+                    <option value="">Uruguay</option>
+                    <option value="">Venezuela</option>
+                  </select>
+                </div>
+                <div class="row">
+                  <label for="signup_nivel-ingles" class="etiqueta">Nivel de Inglés</label>
+                  <select name="signup_nivel-ingles"  id="signup_nivel-ingles" required>
+                    <option value="" selected disabled>--Selecciona--</option>
+                    <option value="Básico">Básico</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
+                    <option value="Nativo">Nativo</option>
+                  </select >
+                </div>            
+                
+              </div>
+              <div>
+                <h4>Datos del Tutor</h4>
+                <div class="row">
+                  <label for="signup_nombre-tutor" class="etiqueta">Nombre Del Tutor</label>
+                  <input type="text" placeholder="Nombre Completo" name="signup_nombre-tutor"  id="signup_nombre-tutor" required>
+                </div>
+                <div class="row">
+                  <label for="signup_correo-tutor" class="etiqueta">Correo Del Tutor</label>
+                  <input type="signup_correo-tutor" placeholder="Correo Electrónico" name="signup_correo-tutor"  id="signup_correo-tutor" required>
+                </div>
+              </div>
+            </div>           
+            
+            <button type="submit" id="btn-signup">Registrarse</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <p class="text-footer">&copy; Derechos Reservados ESCOM 2022-2023</p>
+      </div>
+    </footer>
+
+    <!-- TABS -->
+      <script src="js/login.js"></script>
+      <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

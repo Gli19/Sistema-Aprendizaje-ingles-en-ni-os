@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sopa de letras | English Now </title>  
+    <link rel="icon" href="../img/logo/logo.png">  
+    <link rel="stylesheet" type="text/css" href="../css/estilos_pcuerpo.css">
+    <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="../js/wordfind.js"></script> 
+    <script type="text/javascript" src="../js/wordfindgame.js"></script> 
+</head>
+<body>
+    <h1>SEARCH WORDS - BODY PARTS</h1>
+    <p>Find all the words in English. You can update the game or solve it by pressing the button</p>
+    <div id='juego'></div>
+    <div id='Palabras'></div>
+    <br>
+    <div><button id='solve' class="btn">SOLVE THE GAME</button></div>
+    <div><a href="juego_2_SLetras.html"><button id='solve' class="btn">BACK</button></a></div>
+    <div><a href="./SL_3_Pcuerpo.html"><button id='solve' class="btn">REFRESH</button></a>
+
+    <script>
+    var words = ['Hair','Head','Face','Ears','Eyes','Nose','Mouth','Shoulders','Abdomen','Fingers','Knees','Brain','Heart','Stomach','Kidneys','Bones','Skin','Skeleton','Muscles','Throat'];
+    var gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras'); 
+    var puzzle = wordfind.newPuzzle(words,{height: 30, width:30, fillBlanks: false});
+    wordfind.print(puzzle);   
+    $('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
+    </script>
+    
+</body>
+<footer>FUNGLISH: Juego - Search Words</footer>
+</html>

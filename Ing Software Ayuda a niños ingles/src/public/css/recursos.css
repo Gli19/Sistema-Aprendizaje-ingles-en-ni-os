@@ -1,0 +1,40 @@
+
+
+.tarjeta{
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgb(211, 203, 226);
+    border-radius: 1.5rem;
+}
+.tarjeta .img-recurso{
+    width: 100%;    
+}
+.tarjeta .titulo-recurso{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+.tarjeta .texto-recurso{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.tarjeta .btn-recurso{
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 3rem;
+    color: #000;
+    cursor: pointer;
+    background-color: rgb(207, 12, 12);
+}
+.tarjeta .btn-recurso:hover{
+    background-color: rgb(126, 13, 13);
+    color: beige;
+    transform: scaleX(20%);
+    transform: rotate(360deg);
+    transition: all 0.5s ease-in;
+
+}

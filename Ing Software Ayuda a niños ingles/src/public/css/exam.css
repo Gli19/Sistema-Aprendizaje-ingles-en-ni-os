@@ -1,0 +1,184 @@
+
+/* .topic-container #hub {
+    position: relative;
+} */
+.topic-container .hub-item {
+    display: block;
+    width: 100%;
+}
+.topic-container .hub-item #progressBar {
+    background: rgb(171, 228, 228);
+    display: block;
+    width: 100%;
+    height: 1vh;
+}
+.topic-container .hub-item #progressBar #progressBarFull {
+    background: #0A0;
+    display: block;
+    width: 10%;
+    height: 1vh;
+    transition: all 0.3s;
+}
+.topic-container .hub-item #progressText {
+    display: block;
+    width: 100%;
+    padding: 5% 0 0 5%;
+    text-transform: uppercase;
+    font-size: 0.85vw;
+    letter-spacing: 0.2vw;
+    color: #000;
+    font-family: Klavika Medium;
+}
+.topic-container .hub-score {
+    display: block;
+    width: 15%;
+    right: 0;
+    top: 1vh;
+    padding: 3.5% 0;
+    color: #000;
+}
+.topic-container .hub-score .hub-prefix {
+    font-size: 0.85vw;
+}
+.topic-container .hub-score #score {
+    font-size: 1.75vw;
+}
+.topic-container #question {
+    display: block;
+    width: 100%;
+    padding: 4% 5%;
+    font-size: 1.5vw;
+    color: #272727;
+}
+.topic-container .choice-grid {
+    display: flex;
+    width: 100%;
+    padding: 2% 5% 5% 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+.topic-container .choice-grid .choice-container {
+    display: block;
+    width: 24%;
+    background: rgb(218, 217, 217);
+    border-radius: 1vw;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.topic-container .choice-grid .choice-container.correct {
+    background: rgb(14, 168, 14);
+    color: white;
+}
+.topic-container .choice-grid .choice-container.correct .choice-prefix {
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+}
+.topic-container .choice-grid .choice-container.correct .choice-prefix::before {
+    font-family: 'icomoon' !important;
+    content: "\e905";
+    font-size: 1vw;
+    font-weight: 800;
+}
+.topic-container .choice-grid .choice-container.correct .choice-prefix i,
+.topic-container .choice-grid .choice-container.incorrect .choice-prefix i {
+    display: none;
+}
+.topic-container .choice-grid .choice-container.correct .choice-text,
+.topic-container .choice-grid .choice-container.incorrect .choice-text {
+    color: white;
+}
+.topic-container .choice-grid .choice-container.incorrect {
+    background: rgb(206, 21, 21);
+    color: white;
+}
+.topic-container .choice-grid .choice-container.incorrect .choice-prefix {
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+}
+.topic-container .choice-grid .choice-container.incorrect .choice-prefix::before {
+    font-family: 'icomoon' !important;
+    content: "\e92c";
+    font-size: 1.1vw;
+    font-weight: 800;
+}
+.topic-container .choice-grid .choice-container:hover {
+    cursor: pointer;
+    -webkit-box-shadow: -3px 3px 21px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: -3px 3px 21px 3px rgba(0,0,0,0.75);
+    box-shadow: -3px 3px 21px 3px rgba(0,0,0,0.75);
+}
+.topic-container .choice-grid .choice-container .choice-prefix {
+    width: 100%;
+    padding: 5% 0;
+    background: rgba(21, 32, 177, 0.397);
+}
+/* .topic-container .choice-grid .choice-container .choice-prefix i {
+    font-size: 2rem;
+    font-weight: 800;
+} */
+.topic-container .choice-grid .choice-container .choice-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3% 1.5vw;
+    min-height: 15vh;
+    font-size: 1vw;
+    color: #000;
+}
+
+.topic-container .final {
+    display: none;
+}
+.topic-container .final.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    padding: 2rem;
+    background:rgb(63, 74, 175);
+    /* top: 0; */
+    
+    transition: all 0.3s;
+}
+.topic-container .final div {
+    display: block;
+    width: 50%;
+    text-align: center;
+}
+.topic-container .final div p {
+    font-size: 1vw;
+    color: white;
+    font-family: Klavika Medium;
+}
+.topic-container .final div #finalScore {
+    font-size: 4vw;
+    margin-bottom: 5vh;
+}
+.topic-container .final div .actions {
+    display: block;
+    margin: auto;
+}
+.topic-container .final div .actions button {
+    display: block;
+    padding: 5%;
+    width: 70%;
+    margin: auto;
+    margin-top: 1vh;
+    border-radius: 1vw;
+    border: none;
+    background: var(--blue5);
+    color: white;
+    letter-spacing: 0.05vw;
+    font-size: 0.85vw;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.topic-container .final div .actions button:hover {
+    background: var(--success);
+}
+.topic-container .img-quiz{
+    width: 40%;
+    height: auto;
+}

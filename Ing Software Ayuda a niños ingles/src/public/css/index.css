@@ -1,0 +1,289 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+body{
+	background: #b92b27; 
+	background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  
+	background: linear-gradient(to right, #1e4b7e, #dd251f); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: auto;
+}
+main{
+	display: block;
+	padding: 1rem;
+	margin: auto;
+}
+
+.titulo-bienvenida{
+	font-size: 2.5rem;
+	font-family: var(--primaryFont);	
+}	
+.img-login{
+	width: 60%;
+	transform: rotate(-5deg);
+	margin: 0 auto;
+	filter: drop-shadow(5px 5px 10px #000);
+}
+
+.titulo-bienvenida span{
+	text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+	border-radius: 1rem;
+	font-weight: bold;
+}
+
+.contenedor__todo{
+	width: 90%;
+	margin: 20% auto;
+	position: relative;
+	padding: 5rem 0;
+}
+.caja__trasera{
+	width: 100%;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: space-around;
+	backdrop-filter: blur(5px);
+	background-color: rgba(0, 128, 255, 0.5);
+	-webkit-box-shadow: 3px 4px 22px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 4px 22px 0px rgba(0,0,0,0.75);
+	box-shadow: 3px 4px 22px 0px rgba(0,0,0,0.75);
+}
+.caja__trasera div{
+	margin: 1rem;
+	color: #FFF;
+	font-size: 1rem;
+	text-align: center;
+	transition: all 500ms;
+}
+.caja__trasera div p,
+.caja__trasera div button{ 
+	margin-top: 0.2rem;
+	font-size: 0.7rem;
+}
+.caja__trasera div h3{
+	font-weight: bold;
+	font-size: 0.7rem;
+}
+.caja__trasera button{
+	padding: 0.5rem;
+	border: 2px solid #FFF;
+	background: transparent;
+	border-radius: 1rem;
+	font-size: 0.8rem;
+	font-family: var(--buttonFont);
+	font-weight: bold;
+	cursor: pointer;
+	color: rgb(8, 8, 8);
+	outline: none;
+	transform: all 300ms;
+}
+.caja__trasera button:hover{
+	background-color: #FFF;
+	color: #46A2FD;
+	transition: 0.5s ease-in;
+}
+/* Formularios */
+.contenedor__login-register{
+	display: flex;
+	align-items: center;
+	width: 60%;
+	position: relative;
+	top: -6rem;
+	left: 1rem;
+	transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275	);
+}
+.contenedor__login-register form{
+	width: 80%;
+	padding: 1rem;
+	background: #dbd4ba;
+	position: absolute;
+	border-radius: 2rem;
+}
+.contenedor__login-register .formulario__login{
+	margin-top: 2rem;
+	padding: 1.5rem 1rem;
+}
+.contenedor__login-register form h2{
+	font-size: 1rem;
+	text-align: center;
+	margin-bottom: 0.5rem;
+	color: #46A2FD;
+}
+.contenedor__login-register form label{
+	font-size: 0.5rem;
+	font-style: italic;
+	margin-bottom: 0;
+}
+.contenedor__login-register form input,
+.contenedor__login-register form select{
+	width: 90%;
+	margin: 0 auto;
+	padding: 0.5rem;
+	border: none;
+	background-color: #c7c7c7;
+	font-size: 0.3rem;
+	outline: none;
+}
+.contenedor__login-register form input:focus{
+	-webkit-box-shadow: 0px 3px 20px 1px rgba(255, 133, 19, 0.712);
+	-moz-box-shadow: 0px 3px 20px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 3px 20px 1px rgba(255, 0, 0, 0.445);
+}
+.contenedor__login-register form button{
+	padding: 0.5rem;
+	margin-top: 0.5rem;
+	width: 100%;
+	border: none;
+	border-radius: 3rem;
+	font-family: var(--buttonFont);
+	font-size: 0.7rem;
+	font-weight: bold;
+	background-color: #46A2Fd;
+	color: rgb(0, 0, 0);
+	cursor: pointer;
+	outline: none;	
+}
+.contenedor__login-register form button:hover{
+	background-color: #29537e;
+	color: #FFF;
+	transition: 0.5s ease-in;
+}
+.registro{
+	display: block;
+}
+.registro h4{
+	margin: 0.5rem 0 0 0;
+	font-size: 0.6rem;
+}
+
+.formulario__login{
+	opacity: 1;
+	display: block;	
+}
+.formulario__register{
+	display: none;		
+}
+.footer{
+	width: 100%;
+	background-color: #202020;
+	color: #FFF;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+.footer .text-footer{
+	margin: 0.4rem;
+	font-size: 1rem;
+}
+
+@media (min-width: 800px){
+	body{		
+		overflow: hidden;
+		height: 100vh;		
+	}
+	main{
+		padding: 12% 1%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2rem;
+		justify-content: center;
+	}
+	.seccion-bienvenida{
+		display: flex;
+	}
+	
+	.img-login{
+		max-width: 90%;
+	}
+	.contenedor__todo{
+		margin: 10% auto;
+	}
+	/* Formularios */
+	.contenedor__login-register .formulario__login{
+		margin-top: 3rem;
+	}
+	.footer{
+		bottom: 0;
+	}
+}
+@media (min-width: 1000px){
+	main{
+		padding: 2rem;
+		grid-template-columns: 1fr 1fr;
+	}		
+	.titulo-bienvenida{
+		font-size: 3rem;
+	}	
+	.img-login{
+		margin: 1rem auto;		
+	}
+	.contenedor__todo{
+		width: 100%;
+		margin: 4.5rem auto 2rem auto;
+	}
+
+	.caja__trasera div{
+		margin: 2rem 4rem;
+		color: #FFF;
+		font-size: 2rem;
+
+		transition: all 500ms;
+	}
+	.caja__trasera div p,
+	.caja__trasera div button{ 
+		font-size: 1rem;
+		text-align: center;
+		margin-top: 1rem;
+	}
+	.caja__trasera div h3{
+		font-weight: 400;
+		text-align: center;
+		font-size: 1.3rem;
+	}
+
+	.caja__trasera button{
+		padding: 1rem;
+	}
+
+	/* Formularios */
+	.contenedor__login-register{
+		width: 50%;
+		top: -10.5rem;
+	}
+	.registro h4{
+		font-size: 1rem;
+	}
+	.contenedor__login-register form{
+		width: 100%;
+	}
+	.contenedor__login-register .formulario__login{
+		padding: 4rem 1rem;
+	}
+	.contenedor__login-register form h2{
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.contenedor__login-register form label{
+		font-style: italic;
+		font-size: 0.8rem;
+		margin-bottom: 0;
+	}
+	.contenedor__login-register form input,
+	.contenedor__login-register form select{
+		margin: 0 auto 0.2rem auto;
+		padding: 0.3rem;
+		font-size: 0.7rem;
+	}
+	.contenedor__login-register form button{
+		padding: 1rem;
+		margin-top: 1rem;
+	}
+}

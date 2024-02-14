@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Mochiy Pop One';
+}
+body{
+  background: url(../img/fondo_alternativo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+p {
+  font: 'Mochiy Pop One';
+    width: fit-content;
+    background-color: #fff;
+    margin: 10px 0px 0px 20px;
+    border-radius: 60px;
+    box-shadow: 5px 5px 0 #000;
+    padding: 5px 10px;
+}
+
+h1{
+  font: 'Mochiy Pop One';
+    width: fit-content;
+    background-color: #fff;
+    margin: 5px 0px 0px 20px;
+    border-radius: 60px;
+    box-shadow: 5px 5px 0 #000;
+    padding: 5px 10px;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #000;
+  font-size: 12px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.btn{
+  border: none;
+  background: #580078;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 600px 600px 600px 600px;
+  transition: .5s;
+  -moz-column-count: 3;
+  -moz-column-gap: 100px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 100px;
+  column-count: 3;
+  column-gap: 100px;
+  display: flex;
+}
+.btn:hover{
+  transform: scale(1.1);
+}
+
+/**
+* Styles for the puzzle
+*/
+#juego {
+  border: 7px solid black;
+  float: left;
+  margin: 10px 15px 20px 300px;
+}
+
+#juego div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* style for each square in the puzzle */
+#juego .puzzleSquare {
+  height: 29px;
+  width: 29px;
+  text-transform: uppercase;
+  background-color: white;
+  border: 0;
+  font: 1em 'Mochiy Pop One';
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* indicates when a square has been selected */
+#juego .selected {
+  background-color: aquamarine;
+}
+
+/* indicates that the square is part of a word that has been found */ 
+#juego .found {
+  background-color: midnightblue;
+  color: white;
+}
+
+#juego .solved {
+  background-color: purple;
+  color: white;
+}
+
+/* indicates that all words have been found */
+#juego .complete {
+  background-color: green;
+}
+
+/**
+* Styles for the word list
+*/
+#Palabras {
+  padding-top: 0px;
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  column-count: 2;
+  column-gap: 20px;
+  width: 300px;
+  display: block;
+  font-size: 20px;
+  font-family: 'Mochiy Pop One';
+}
+
+#Palabras ul {
+  list-style-type: none;
+}
+
+#Palabras li {
+  padding: 2px 0;
+  font: 1em 'Mochiy Pop One';
+}
+
+/* indicates that the word has been found */
+#Palabras .wordFound {
+  text-decoration: line-through;
+  color: red;
+}
+
+/**
+* Styles for the button
+*/
+#solve {
+  border: none;
+  background: #580078;
+  color: #fff;
+  padding: 1px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 5px auto;
+  transition: .5s;
+  display: inline-flexbox;
+}

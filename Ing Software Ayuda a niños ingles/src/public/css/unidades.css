@@ -1,0 +1,88 @@
+.section-container-unidades{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.section-container-unidades .cont-unidad{
+    margin: 2rem;
+    width: 20rem;
+    padding: 1rem;
+    height: 10rem;
+    border-radius: 2rem;
+    -webkit-box-shadow: 7px 10px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 10px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 10px 15px 0px rgba(0,0,0,0.75);
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    filter: brightness(60%);
+    cursor: pointer;
+    color: #000;
+}
+.section-container-unidades .cont-unidad:hover{
+    filter: brightness(80%);
+    transform: scale(110%);
+    transition: all 0.4s ease-in;  
+}
+
+.section-container-unidades .cont-unidad a{
+    text-decoration: none;
+    width: 100%;
+}
+
+.cont-unidad a .titulo-unidad{
+    font-size: 2rem;
+    color: #000;
+}
+.cont-unidad a .unidad{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.section-container-topics{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin: 2rem auto;
+}
+
+
+.topic-container{
+    background: #9cdf87;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    text-align: center;
+    -webkit-box-shadow: 4px 7px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 7px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 4px 7px 15px 0px rgba(0,0,0,0.75);
+}
+.topic-container table{
+    margin: 1rem auto;
+    padding: 1rem;
+    word-wrap: break-word;
+
+    background-color: #c3c3db;
+}
+.topic-container table tr{
+    border-right: 1px solid #000 ;
+
+}
+
+.topic-container .titulo-topic{
+    font-size: 1.5rem ;
+    margin-bottom: 1rem;
+}
+.btn-desplazamiento{
+    display: inline-block;
+    margin-top: 1rem;
+}
+.btn-desplazamiento a:hover{
+    filter: invert(100%);
+}
+
+.img-unidad{
+    width: 90%;
+}
+
